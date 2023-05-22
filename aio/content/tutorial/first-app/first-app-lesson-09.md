@@ -94,7 +94,7 @@ In a later lesson, you replace the static data with a live data source to get da
 
 In the **Edit** pane of your IDE, in `src/app/home/home.component.ts`:
 
-1.  At the top of `src/app/home/home.component.ts`, add the `inject` to the items imported from `@angular/common`. This will import the `inject` function into the `HomeComponent` class.
+1.  At the top of `src/app/home/home.component.ts`, add the `inject` to the items imported from `@angular/core`. This will import the `inject` function into the `HomeComponent` class.
 
     <code-example header="Update to src/app/home/home.component.ts" path="first-app-lesson-09/src/app/home/home.component.ts" region="import-inject"></code-example>
 
@@ -102,9 +102,9 @@ In the **Edit** pane of your IDE, in `src/app/home/home.component.ts`:
 
     <code-example header="Add import to src/app/home/home.component.ts" path="first-app-lesson-09/src/app/home/home.component.ts" region="import-service"></code-example>
 
-1.  From `HomeComponent`, delete the `housingLocationList` delete the array entries and assign `housingLocationList` the value of empty array (`[]`). In a few steps you will update the code to pull the data from the `HousingService`.
+1.  From `HomeComponent`, delete the `housingLocationList`'s array entries and assign `housingLocationList` the value of empty array (`[]`). In a few steps you will update the code to pull the data from the `HousingService`.
 
-1.  In `HomeComponent`, add this code to inject the new service and initialize the data for the app. The `constructor` is the first function that runs when this component is created. The code in the `constructor` will assign the `housingLocationList` the value returned from the call to `getAllHousingLocations`.
+1.  In the `HomeComponent` class, add this code to inject the new service and initialize the data for the app. The `constructor` is the first function that runs when this component is created. The code in the `constructor` will assign the `housingLocationList` the value returned from the call to `getAllHousingLocations`.
 
     <code-example header="Initialize data from service in src/app/home/home.component.ts" path="first-app-lesson-09/src/app/home/home.component.ts" region="use-new-service"></code-example>
 
